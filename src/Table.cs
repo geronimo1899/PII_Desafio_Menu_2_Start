@@ -1,11 +1,8 @@
 namespace Ucu.Poo.Restaurant
 {
-    /// <summary>
-    /// Representa una mesa en el restaurante.
-    /// </summary>
     public class Table
     {
-        private Order order;
+        private Order order = new Order();
 
         public int Number { get; set; }
         public bool IsOccupied { get; set; }
@@ -33,7 +30,7 @@ namespace Ucu.Poo.Restaurant
 
         public bool HasOrders()
         {
-            return this.order.Count > 0;
+            return this.order.HasOrders();
         }
     }
 }
